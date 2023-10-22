@@ -1,0 +1,18 @@
+﻿@page "/"
+@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
+
+<PageTitle>Index</PageTitle>
+
+<h1>سلام</h1>
+
+<h2 class="form-title">@Localizer[nameof(General.SigninTitle)]</h2>
+
+<button class="btn btn-secondary" @onclick="OnSelected">Change Language</button>
+@code {
+
+    private void OnSelected()
+    {
+        NavigationManager.NavigateTo("Culture", true);
+    }
+}

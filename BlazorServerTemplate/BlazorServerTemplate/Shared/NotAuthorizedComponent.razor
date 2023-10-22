@@ -1,0 +1,11 @@
+﻿@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
+
+<PageTitle>@Localizer[nameof(General.NotAuthorizeTitle)]</PageTitle>
+
+<AuthorizeView>
+    <div class="d-flex flex-column text-center pt-0">
+        <h3>@Localizer[nameof(General.NotAuthorizeMessage)]</h3>
+        <a href="/">@Localizer[nameof(General.HomeBtn)]</a>
+    </div>
+</AuthorizeView>

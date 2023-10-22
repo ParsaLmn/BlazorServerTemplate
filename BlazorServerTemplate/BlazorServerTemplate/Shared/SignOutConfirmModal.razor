@@ -1,0 +1,22 @@
+﻿@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
+
+<BitModal @bind-IsOpen="IsOpen">
+    <div class="main-container">
+        <div class="header">
+            <span class="title">@Localizer[nameof(General.SignoutTitle)]</span>         
+            <button class="btn border-0 bg-transparent shadow-none" @onclick="CloseModal"
+            title="@Localizer[nameof(General.CloseBtn)]"><BitIcon IconName="@BitIconName.ChromeClose" /></button>
+        </div>
+        <div class="body">@Localizer[nameof(General.SignoutMessage)]</div>
+        <div class="btn-group">
+            <div class="mx-1">
+                <BitButton Class="bg-razy border-0" Style="margin-right: 0.5rem" OnClick="SignOut">@Localizer[nameof(General.YesBtn)]</BitButton>
+            </div>
+
+            <div class="mx-1">
+                <BitButton Class="border-danger text-danger bg-white" OnClick="CloseModal">@Localizer[nameof(General.NoBtn)]</BitButton>
+            </div>
+        </div>
+    </div>
+</BitModal>

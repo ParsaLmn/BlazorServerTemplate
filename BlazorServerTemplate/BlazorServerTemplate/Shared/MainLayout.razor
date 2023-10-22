@@ -1,0 +1,14 @@
+﻿@inherits LayoutComponentBase
+
+<div class="main bg-light @(_isUserAuthenticated is false ? "main--full-page" : null)">
+    @if (_isUserAuthenticated)
+    {
+        <Header OnToggleMenu=@ToggleMenuHandler />
+        <NavMenu @bind-IsMenuOpen=@_isMenuOpen />
+    }
+    <div class="site-content bg-light">
+        @Body
+    </div>
+    <Footer />
+</div>
+

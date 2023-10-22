@@ -1,0 +1,48 @@
+﻿@page "/sign-in"
+@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
+@layout EmptyLayout
+
+<PageTitle>ورود</PageTitle>
+
+<div class="page-container">
+    <section class="page-section p-0 pb-5">
+        <EditForm Model="_signInModel" OnValidSubmit="DoSignIn" class="form">
+            <DataAnnotationsValidator />
+
+            <h2 class="form-title">@Localizer[nameof(General.SigninTitle)]</h2>
+
+            <div class="form-input-container">
+                <label class="label label-control lable-custom">@Localizer[nameof(General.UserName)]</label>
+                <InputText @bind-Value=_signInModel.UserName placeholder="@Localizer[nameof(General.UserNamePlaceHolder)]"
+                           class="form-control" type="number" />
+                <ValidationMessage For="@(() => _signInModel.UserName)" />
+            </div>
+
+            <div class="form-input-container">
+                <label class="label label-control lable-custom">@Localizer[nameof(General.Password)]</label>
+                <div style="position:relative">
+                    <InputText @bind-Value=_signInModel.Password placeholder="@Localizer[nameof(General.PasswordPlaceHolder)]"
+                               class="form-control" type="@_passInputType" />
+                    <button type="button" style="position:absolute;left:1px;top:2px" @onclick="ShowPassword" class="border-0 bg-transparent py-1 px-2">
+                        <BitIcon IconName="@ShowHidePass" AriaLabel="@ShowHidePass.ToString()" />
+                    </button>
+                </div>
+                <ValidationMessage For="@(() => _signInModel.Password)" />
+            </div>
+
+            <BitLoadingButton Class="bg-razy text-white border-0" IsLoading="_isLoading"
+                              ButtonStyle="BitButtonStyle.Primary"
+                              Title="@Localizer[nameof(General.SigninBtn)]"
+                              AriaLabel="@Localizer[nameof(General.SigninTitle)]"
+                              ButtonType="BitButtonType.Submit">
+                <span>ورود</span>
+            </BitLoadingButton>
+        </EditForm>
+    </section>
+</div>
+
+@if (string.IsNullOrEmpty(_signInMessage) is false)
+{
+    <StickyMessageBar Class="bg-danger fs-08" IsDismissable=true HasTimeout=true Message="@_signInMessage" OnDismiss="() => _signInMessage = null" />
+}
