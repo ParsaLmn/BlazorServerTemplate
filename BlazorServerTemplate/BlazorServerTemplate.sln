@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerTemplate", "BlazorServerTemplate\BlazorServerTemplate.csproj", "{15C53584-FB38-415B-9F3D-3F0433D5BF5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerTemplate", "BlazorServerTemplate\BlazorServerTemplate.csproj", "{15C53584-FB38-415B-9F3D-3F0433D5BF5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{936F6206-6DB8-49A5-9981-4AC829C2DF31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{936F6206-6DB8-49A5-9981-4AC829C2DF31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{F9D63C12-45A8-4812-ACC4-6607F6C49BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{F9D63C12-45A8-4812-ACC4-6607F6C49BB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

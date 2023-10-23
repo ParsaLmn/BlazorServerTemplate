@@ -11,7 +11,7 @@ namespace Application.Services
 {
     public class AuthTokenProvider : IAuthTokenProvider
     {
-         private ILocalStorageService _localStorageService = default!;
+        private ILocalStorageService _localStorageService = default!;
 
         public AuthTokenProvider(ILocalStorageService localStorageService)
         {
@@ -21,6 +21,16 @@ namespace Application.Services
         public async Task<string?> GetAcccessTokenAsync()
         {
             return await _localStorageService.GetItemAsStringAsync("token");
+        }
+        public async Task RemoveAcccessTokenAsync()
+        {
+            try
+            {
+                await _localStorageService.RemoveItemAsync("token");
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

@@ -9,5 +9,6 @@ namespace Application.Interfaces
     public interface IAuthTokenProvider
     {
         Task<string?> GetAcccessTokenAsync();
+        Task RemoveAcccessTokenAsync();
     }
 }

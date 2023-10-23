@@ -7,7 +7,20 @@
 
 <h1>سلام</h1>
 
-<button class="btn btn-primary" type="button"
-@onclick='()=>NavigationManager.NavigateTo("/counter",false)'>
-    counter
-</button>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userRole = authState.User.Identities.First().Claims.ToList()[6].Value;
+        if (userRole == "admin")
+        {
+            NavigationManager.NavigateTo("/indexAdmin");
+        }
+        if (userRole == "user")
+        {
+            NavigationManager.NavigateTo("/indexUser");
+        }
+
+        await base.OnInitializedAsync();
+    }
+}
