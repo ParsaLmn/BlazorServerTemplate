@@ -1,11 +1,12 @@
-﻿@implements IDisposable
+﻿@using global::Shared.Enums;
+@implements IDisposable
 
-<div class="notification shadow-top @Show @Class" id="@Id" @attributes="AdditionalAttributes">
+<div class="notification shadow-top @bgColor @Show @Class" id="@Id" @attributes="AdditionalAttributes">
     @if (IsDismissable)
     {
         <span>
             <button @onclick="HideStickyMessageBar" type="button"
-                    class="btn btn-sm bg-transparent shadow-none mx-3">
+                    class="btn btn-sm bg-transparent text-white shadow-none mx-3">
                 <BitIcon IconName="@BitIconName.ChromeClose" />
             </button>
         </span>
@@ -24,7 +25,10 @@
     public string Message { get; set; } = default!;
 
     [Parameter]
-    public string Class { get; set; } = "bg-light text-dark";
+    public string Class { get; set; } = "text-white";
+
+    [Parameter]
+    public StickyMessageType MessageType { get; set; } = StickyMessageType.Success;
 
     /// <summary>
     /// Time in Milliseconds
@@ -44,12 +48,29 @@
     [Parameter]
     public EventCallback OnDismiss { get; set; }
 
+    string bgColor = "";
     string Show = "";
     Timer showTimer;
     Timer hideTimer;
 
     protected override async Task OnInitializedAsync()
     {
+        switch (MessageType)
+        {
+            case StickyMessageType.Success:
+                bgColor = "bg-success";
+                break;
+            case StickyMessageType.Error:
+                bgColor = "bg-danger";
+                break;
+            case StickyMessageType.Warning:
+                bgColor = "bg-warning";
+                break;
+            case StickyMessageType.Info:
+                bgColor = "bg-info";
+                break;
+        }
+
         ShowStickyMessageBar();
 
         await base.OnInitializedAsync();
@@ -60,10 +81,13 @@
     private void ShowStickyMessageBar()
     {
 
-        showTimer = new((_) =>
+        showTimer = new(async (_) =>
         {
-            Show = "show";
-            StateHasChanged();
+            await InvokeAsync(() =>
+       {
+           Show = "show";
+           StateHasChanged();
+       });
         }, null, 200, 0);
 
         if (!HasTimeout)
@@ -74,12 +98,15 @@
         else
             TimeOut = 500;
 
-        hideTimer = new((_) =>
+        hideTimer = new(async (_) =>
         {
             if (!string.IsNullOrEmpty(Show))
             {
-                HideStickyMessageBar();
-                StateHasChanged();
+                await InvokeAsync(() =>
+       {
+           HideStickyMessageBar();
+           StateHasChanged();
+       });
             }
         }, null, TimeOut, 0);
     }
@@ -94,7 +121,11 @@
     {
         Timer test = new(async (_) =>
           {
-              await OnDismiss.InvokeAsync();
+
+              await InvokeAsync(async () =>
+    {
+        await OnDismiss.InvokeAsync();
+    });
           }, null, 400, 0);
     }
 

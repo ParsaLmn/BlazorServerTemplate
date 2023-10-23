@@ -8,7 +8,6 @@ public partial class SignInPage
 {
     public bool _isLoading;
     public string? _signInMessage;
-    public BitMessageBarType _signInMessageType;
     public SignInRequestDto _signInModel = new();
 
     string ShowHidePass = BitIconName.View;
@@ -45,7 +44,6 @@ public partial class SignInPage
         catch (Exception ex)
         {
             _signInMessage = ex.Message;
-            _signInMessageType = BitMessageBarType.Error;
         }
         finally
         {
