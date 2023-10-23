@@ -2,7 +2,7 @@ using Bit.BlazorUI;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using Shared.Resources;
+//using Shared.Resources;
 
 namespace BlazorServerTemplate.Shared;
 public partial class NavMenu
@@ -34,7 +34,7 @@ public partial class NavMenu
         {
             new BitNavItem
             {
-                Text = @Localizer[nameof(General.HomeBtn)],
+                Text = "ÎÇהו",
                 IconName = BitIconName.Home,
                 Url = "/",
             }

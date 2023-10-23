@@ -20,8 +20,7 @@ namespace Application.Services
 
         public async Task<string?> GetAcccessTokenAsync()
         {
-            //return await _localStorageService.GetItemAsStringAsync("token");
-            return "";
+            return await _localStorageService.GetItemAsStringAsync("token");
         }
     }
 }

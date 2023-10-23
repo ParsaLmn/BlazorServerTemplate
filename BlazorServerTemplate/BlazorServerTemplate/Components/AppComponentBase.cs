@@ -3,7 +3,7 @@ using Application.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
-using Shared.Resources;
+//using Shared.Resources;
 
 namespace BlazorServerTemplate.Components
 {
@@ -15,7 +15,7 @@ namespace BlazorServerTemplate.Components
         [Inject] protected IAuthTokenProvider AuthTokenProvider { get; set; } = default!;
         [Inject] protected IAuthenticationService AuthenticationService { get; set; } = default!;
         [Inject] protected AppAuthenticationStateProvider AuthenticationStateProvider { get; set; } = default!;
-        [Inject] protected IStringLocalizer<General> Localizer { get; set; } = default!;
+        //[Inject] protected IStringLocalizer<General> Localizer { get; set; } = default!;
 
 
     }

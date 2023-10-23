@@ -6,13 +6,7 @@
 
 <h1>سلام</h1>
 
-<h2 class="form-title">@Localizer[nameof(General.SigninTitle)]</h2>
-
-<button class="btn btn-secondary" @onclick="OnSelected">Change Language</button>
-@code {
-
-    private void OnSelected()
-    {
-        NavigationManager.NavigateTo("Culture", true);
-    }
-}
+<button class="btn btn-primary" type="button"
+@onclick='()=>NavigationManager.NavigateTo("/counter",false)'>
+    counter
+</button>

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Localization;
-using Shared.Resources;
 using System.Net;
 using System.Runtime.Serialization;
 
@@ -9,7 +8,7 @@ namespace Shared.Exceptions;
 public class ForbiddenException : RestException
 {
     public ForbiddenException()
-        : base(nameof(General.ForbiddenException))
+        : base("دسترسی ممنوع است")
     {
     }
 

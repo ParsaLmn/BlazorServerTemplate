@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Localization;
-using Shared.Resources;
 using System.Net;
 using System.Runtime.Serialization;
 
@@ -9,7 +8,7 @@ namespace Shared.Exceptions;
 public class BadRequestException : RestException
 {
     public BadRequestException()
-        : base(nameof(General.BadRequestException))
+        : base("اطلاعات ورودی نا معتبر")
     {
     }
 

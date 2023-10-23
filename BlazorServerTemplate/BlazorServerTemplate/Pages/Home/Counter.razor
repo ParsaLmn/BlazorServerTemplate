@@ -1,4 +1,6 @@
 ﻿@page "/counter"
+@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
 
 <PageTitle>Counter</PageTitle>
 
@@ -7,6 +9,11 @@
 <p role="status">Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<button class="btn btn-secondary" type="button"
+@onclick='()=>NavigationManager.NavigateTo("/",false)'>
+    Home
+</button>
 
 @code {
     private int currentCount = 0;

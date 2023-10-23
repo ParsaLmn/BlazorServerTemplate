@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Localization;
-using Shared.Resources;
 using System.Net;
 using System.Runtime.Serialization;
 
@@ -10,7 +9,7 @@ namespace Shared.Exceptions;
 public class TooManyRequestsExceptions : RestException
 {
     public TooManyRequestsExceptions()
-        : base(nameof(General.TooManyRequestsExceptions))
+        : base("درخواست بیش از حد مجاز")
     {
     }
 

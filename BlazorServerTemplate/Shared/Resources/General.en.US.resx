@@ -201,6 +201,9 @@
   <data name="SignoutTitle" xml:space="preserve">
     <value>Signout</value>
   </data>
+  <data name="Test" xml:space="preserve">
+    <value>Testtttttt</value>
+  </data>
   <data name="TooManyRequestsExceptions" xml:space="preserve">
     <value>TooMany requests</value>
   </data>

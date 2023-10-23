@@ -1,5 +1,4 @@
-﻿using Shared.Resources;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,12 +10,12 @@ namespace Shared.Dtos
 {
     public class SignInRequestDto
     {
-        [Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(General), ErrorMessageResourceName = nameof(General.UserNameRequired))]        
-        [Display(ResourceType = typeof(General), Name = (nameof(General.UserName)))]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceName = "وارد کردن نام کاربری الزامیست")]        
+        [Display( Name = "نام کاربری")]
         public string? UserName { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(General), ErrorMessageResourceName = nameof(General.PasswordRequired))]
-        [Display(ResourceType = typeof(General), Name = (nameof(General.Password)))]
+        [Required(AllowEmptyStrings = false,  ErrorMessageResourceName = "وارد کردن رمز عبور الزامیست")]
+        [Display(Name = "رمز عبور")]
         public string? Password { get; set; }
     }
 }

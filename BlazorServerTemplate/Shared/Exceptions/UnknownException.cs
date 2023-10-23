@@ -1,5 +1,4 @@
-﻿using Shared.Resources;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace Shared.Exceptions;
 
@@ -7,7 +6,7 @@ namespace Shared.Exceptions;
 public class UnknownException : ApplicationException
 {
     public UnknownException()
-        : base(nameof(General.UnknownException))
+        : base("خطا در انجام عملیات")
     {
     }
 

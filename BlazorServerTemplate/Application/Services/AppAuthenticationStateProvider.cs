@@ -20,8 +20,7 @@ namespace Application.Services
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            //var access_token = await _tokenProvider.GetAcccessTokenAsync();
-            var access_token = "";
+            var access_token = await _tokenProvider.GetAcccessTokenAsync();
 
             if (string.IsNullOrWhiteSpace(access_token)) return NotSignedIn();
 

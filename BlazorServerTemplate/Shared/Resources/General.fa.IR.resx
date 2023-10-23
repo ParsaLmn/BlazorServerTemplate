@@ -201,6 +201,9 @@
   <data name="SignoutTitle" xml:space="preserve">
     <value>خروج</value>
   </data>
+  <data name="Test" xml:space="preserve">
+    <value>123123</value>
+  </data>
   <data name="TooManyRequestsExceptions" xml:space="preserve">
     <value>درخواست بیش از حد مجاز</value>
   </data>

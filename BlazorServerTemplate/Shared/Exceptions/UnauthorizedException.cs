@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Localization;
-using Shared.Resources;
 using System.Net;
 using System.Runtime.Serialization;
 
@@ -9,7 +8,7 @@ namespace Shared.Exceptions;
 public class UnauthorizedException : RestException
 {
     public UnauthorizedException()
-        : base(nameof(General.UnauthorizedException))
+        : base("خطا احراز هویت")
     {
     }
 

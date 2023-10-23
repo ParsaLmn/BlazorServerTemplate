@@ -22,23 +22,13 @@ builder.Services.AddScoped(sp =>
 });
 
 builder.Services.AddScoped<AppHttpClientHandler>();
-builder.Services.AddAuthorizationCore();
+//builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, AppAuthenticationStateProvider>();
 builder.Services.AddScoped(sp => (AppAuthenticationStateProvider)sp.GetRequiredService<AuthenticationStateProvider>());
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IAuthTokenProvider, AuthTokenProvider>();
 builder.Services.AddScoped<IWebServiceClient, WebServiceClient>();
 builder.Services.AddBlazoredLocalStorage();
-builder.Services.AddLocalization();
-
-
-
-builder.Services.AddLocalization(options => options.ResourcesPath = "Shared.Resources");
-var localizeOptions = new RequestLocalizationOptions()
-                .SetDefaultCulture("fa-IR")
-                .AddSupportedCultures("en-US", "fa-IR")
-                .AddSupportedUICultures("en-US", "fa-IR");
-
 
 
 var app = builder.Build();
@@ -57,8 +47,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthorization();
 
-app.UseRequestLocalization(localizeOptions);
 app.MapControllers();
 
 

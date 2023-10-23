@@ -27,8 +27,7 @@ namespace Application.Services
         {
             if (request.Headers.Authorization is null)
             {
-                //var access_token = await _tokenProvider.GetAcccessTokenAsync();
-                var access_token = "";
+                var access_token = await _tokenProvider.GetAcccessTokenAsync();
                 if (access_token is not null)
                 {
                     request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", access_token);
