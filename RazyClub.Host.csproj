@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Shared\Header.razor.cs" />
+    <Compile Remove="Shared\MainLayout.razor.cs" />
+    <Compile Remove="Shared\NavMenu.razor.cs" />
+    <Compile Remove="Shared\NotAuthorizedComponent.razor.cs" />
+    <Compile Remove="Shared\SignOutConfirmModal.razor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\Footer.razor" />
+    <Content Remove="Shared\Header.razor" />
+    <Content Remove="Shared\MainLayout.razor" />
+    <Content Remove="Shared\NavMenu.razor" />
+    <Content Remove="Shared\NotAuthorizedComponent.razor" />
+    <Content Remove="Shared\PageNotFound.razor" />
+    <Content Remove="Shared\SignOutConfirmModal.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Shared\Footer.razor.css" />
+    <None Remove="Shared\Header.razor.css" />
+    <None Remove="Shared\MainLayout.razor.css" />
+    <None Remove="Shared\NavMenu.razor.css" />
+    <None Remove="Shared\PageNotFound.razor.css" />
+    <None Remove="Shared\SignOutConfirmModal.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.11" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.15" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdminPanel\RazyClub.AdminPanel.csproj" />
+    <ProjectReference Include="..\Application\RazyClub.Application.csproj" />
+    <ProjectReference Include="..\RazyClub.Components\RazyClub.BlazorComponents.csproj" />
+    <ProjectReference Include="..\RazyClub.Customers\RazyClub.Customers.csproj" />
+    <ProjectReference Include="..\Shared\RazyClub.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
+</Project>

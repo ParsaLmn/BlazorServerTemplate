@@ -1,0 +1,514 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Projects\\RazyClub\\RazyClub\\BlazorServerTemplate\\RazyClub.Host.csproj": {}
+  },
+  "projects": {
+    "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\RazyClub.AdminPanel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\RazyClub.AdminPanel.csproj",
+        "projectName": "RazyClub.AdminPanel",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\RazyClub.AdminPanel.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj",
+        "projectName": "RazyClub.Application",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Projects\\RazyClub\\RazyClub\\BlazorServerTemplate\\RazyClub.Host.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\BlazorServerTemplate\\RazyClub.Host.csproj",
+        "projectName": "RazyClub.Host",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\BlazorServerTemplate\\RazyClub.Host.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\BlazorServerTemplate\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\RazyClub.AdminPanel.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\AdminPanel\\RazyClub.AdminPanel.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\RazyClub.Customers.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\RazyClub.Customers.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Localization": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj",
+        "projectName": "RazyClub.BlazorComponents",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Bit.BlazorUI": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Bit.BlazorUI.Extras": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Bit.BlazorUI.Icons": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[6.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\RazyClub.Customers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\RazyClub.Customers.csproj",
+        "projectName": "RazyClub.Customers",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\RazyClub.Customers.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Customers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Application\\RazyClub.Application.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\RazyClub.Components\\RazyClub.BlazorComponents.csproj"
+              },
+              "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+                "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj",
+        "projectName": "RazyClub.Shared",
+        "projectPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\RazyClub.Shared.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\RazyClub\\RazyClub\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "DNTPersianUtils.Core": {
+              "target": "Package",
+              "version": "[5.9.0, )"
+            },
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
