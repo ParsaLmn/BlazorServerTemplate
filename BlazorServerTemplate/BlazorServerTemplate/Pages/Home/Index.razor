@@ -1,0 +1,26 @@
+﻿@page "/"
+@using BlazorServerTemplate.Components;
+@inherits AppComponentBase
+@attribute [Authorize]
+
+<PageTitle>Index</PageTitle>
+
+<h1>سلام</h1>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var userRole = authState.User.Identities.First().Claims.ToList()[6].Value;
+        if (userRole == "admin")
+        {
+            NavigationManager.NavigateTo("/indexAdmin");
+        }
+        if (userRole == "user")
+        {
+            NavigationManager.NavigateTo("/indexUser");
+        }
+
+        await base.OnInitializedAsync();
+    }
+}

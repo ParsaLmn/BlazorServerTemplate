@@ -1,0 +1,17 @@
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    <NotAuthorizedComponent />
+                </NotAuthorized>
+                <Authorizing>
+                    <LoadingComponent Class="pt-5" Text="درحال دریافت اطلاعات..." />
+                </Authorizing>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <PageNotFound />
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
